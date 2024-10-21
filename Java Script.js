@@ -1,4 +1,3 @@
-// Alternar entre modo claro e escuro
 const toggleThemeButton = document.createElement('button');
 toggleThemeButton.innerText = 'Modo Claro/Escuro';
 toggleThemeButton.style.position = 'fixed';
