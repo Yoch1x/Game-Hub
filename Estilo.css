@@ -204,4 +204,10 @@ footer {
     nav ul li {
         margin: 10px 0;
     }
-}
+    .review-image {
+        width: 100%; /* Ajusta a largura da imagem para preencher o espaço */
+        max-width: 400px; /* Define uma largura máxima */
+        height: auto; /* Mantém a proporção da imagem */
+        border-radius: 10px; /* Arredonda os cantos da imagem */
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3); /* Sombra para dar profundidade */
+        margin: 10px 0; /* Espaço entre a imagem e o texto */
