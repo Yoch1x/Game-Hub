@@ -212,40 +212,7 @@ footer {
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3); /* Sombra para dar profundidade */
     margin: 10px 0; /* Espaço entre a imagem e o texto */
 }
-/* Estilo geral para o cabeçalho */
-.animated-header {
-    position: relative;
-    text-align: center;
-    padding: 50px 0;
-    color: white;
-    overflow: hidden;
-    background: linear-gradient(135deg, #1a1a1d, #282828, #1a1a1d);
-    background-size: 300% 300%;
-    animation: gradientBackground 15s ease infinite;
-}
 
-/* Animação do fundo do cabeçalho */
-@keyframes gradientBackground {
-    0% { background-position: 0% 50%; }
-    50% { background-position: 100% 50%; }
-    100% { background-position: 0% 50%; }
-}
-
-/* Animação de partículas */
-@keyframes float {
-    0% { transform: translateY(0px); opacity: 0.8; }
-    50% { transform: translateY(-15px); opacity: 1; }
-    100% { transform: translateY(0px); opacity: 0.8; }
-}
-
-/* Partículas de fundo */
-.particle {
-    position: absolute;
-    background: rgba(255, 255, 255, 0.15);
-    border-radius: 50%;
-    pointer-events: none;
-    animation: float 8s ease-in-out infinite;
-}
 
 .particle:nth-child(1) {
     width: 10px;
@@ -271,45 +238,6 @@ footer {
     animation-duration: 6s;
 }
 
-/* Estilos para o conteúdo do cabeçalho */
-.animated-header h1 {
-    font-size: 3rem;
-    font-weight: bold;
-}
-/* Estilo geral para o cabeçalho */
-.animated-header {
-    position: relative;
-    text-align: center;
-    padding: 50px 0;
-    color: white;
-    overflow: hidden;
-    background: linear-gradient(135deg, #1a1a1d, #282828, #1a1a1d);
-    background-size: 300% 300%;
-    animation: gradientBackground 15s ease infinite;
-}
-
-/* Animação do fundo do cabeçalho */
-@keyframes gradientBackground {
-    0% { background-position: 0% 50%; }
-    50% { background-position: 100% 50%; }
-    100% { background-position: 0% 50%; }
-}
-
-/* Animação de partículas */
-@keyframes float {
-    0% { transform: translateY(0px); opacity: 0.8; }
-    50% { transform: translateY(-15px); opacity: 1; }
-    100% { transform: translateY(0px); opacity: 0.8; }
-}
-
-/* Partículas de fundo */
-.particle {
-    position: absolute;
-    background: rgba(255, 255, 255, 0.15);
-    border-radius: 50%;
-    pointer-events: none;
-    animation: float 8s ease-in-out infinite;
-}
 
 .particle:nth-child(1) {
     width: 10px;
@@ -334,12 +262,7 @@ footer {
     left: 50%;
     animation-duration: 6s;
 }
-
-/* Estilos para o conteúdo do cabeçalho */
-.animated-header h1 {
-    font-size: 3rem;
-    font-weight: bold;
-}/* Fundo animado */
+/* Fundo animado */
 .animated-background {
     position: fixed;
     top: 0;
@@ -427,4 +350,9 @@ main {
     color: white;
     padding: 20px;
     text-align: center;
+}html, body {
+    height: 100%;
+    overflow-y: auto; /* Permite rolagem vertical */
+    margin: 0;
+    padding: 0;
 }
