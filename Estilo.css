@@ -357,4 +357,74 @@ footer {
     0% { background-position: 0% 50%; }
     50% { background-position: 100% 50%; }
     100% { background-position: 0% 50%; }
+}/* Fundo animado */
+body, html {
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    font-family: Arial, sans-serif;
+}
+
+.background-pattern {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: #000;
+    overflow: hidden;
+}
+
+.background-pattern::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 200%;
+    height: 200%;
+    background: url('https://www.transparenttextures.com/patterns/topography.png');
+    opacity: 0.2;
+    animation: animatePattern 10s linear infinite;
+}
+
+@keyframes animatePattern {
+    0% {
+        transform: translate(0, 0);
+    }
+    100% {
+        transform: translate(-50%, -50%);
+    }
+}
+
+/* Estilo do conteúdo */
+header {
+    position: relative;
+    z-index: 10;
+    color: white;
+    text-align: center;
+    padding: 20px;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 10px;
+}
+
+nav ul li a {
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+main {
+    position: relative;
+    z-index: 10;
+    color: white;
+    padding: 20px;
+    text-align: center;
 }
