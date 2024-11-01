@@ -358,7 +358,7 @@ html, body {
     padding: 0;
 }
 h4 {
-    font-size: 2rem;
+    font-size: -2rem;
     color: #0d10e0;
     letter-spacing: 4px;
 }
