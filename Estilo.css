@@ -32,7 +32,7 @@ header:hover {
 
 h1 {
     font-size: 3rem;
-    color: #e94560;
+    color: #0d10e0;
     letter-spacing: 4px;
 }
 
@@ -59,7 +59,7 @@ nav ul li a::after {
     content: '';
     width: 0;
     height: 3px;
-    background-color: #e94560;
+    background-color: #0931e0;
     display: block;
     margin: auto;
     transition: width 0.4s ease-in-out;
@@ -108,7 +108,7 @@ nav ul li a:hover::after {
 }
 
 #cta-button:hover {
-    background-color: #ff5871;
+    background-color: #2404da;
     transform: translateY(-5px);
     box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
 }
@@ -123,7 +123,7 @@ section {
 section h2 {
     font-size: 2.5rem;
     margin-bottom: 40px;
-    color: #e94560;
+    color: #1a0cdb;
 }
 
 article {
@@ -142,7 +142,7 @@ article:hover {
 
 article h3 {
     font-size: 1.8rem;
-    color: #ff4081;
+    color: #1f0bd4;
     margin-bottom: 10px;
 }
 
@@ -163,7 +163,7 @@ article button {
 }
 
 article button:hover {
-    background-color: #ff6081;
+    background-color: #220ddb;
 }
 
 /* Seção de Gameplay */
