@@ -339,4 +339,22 @@ footer {
 .animated-header h1 {
     font-size: 3rem;
     font-weight: bold;
+}/* Fundo animado */
+.animated-background {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: -1;
+    background: linear-gradient(135deg, #1a1a1d, #282828, #1a1a1d);
+    background-size: 300% 300%;
+    animation: gradientBackground 15s ease infinite;
+    overflow: hidden;
+}
+
+@keyframes gradientBackground {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
 }

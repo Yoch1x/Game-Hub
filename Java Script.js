@@ -23,3 +23,20 @@ function createParticle() {
 
 // Cria partículas a cada intervalo de tempo
 setInterval(createParticle, 1000);
+// Seleciona o fundo animado
+const background = document.querySelector('.animated-background');
+
+function createParticle() {
+    const particle = document.createElement('span');
+    particle.classList.add('particle');
+    particle.style.left = `${Math.random() * 100}%`;
+    particle.style.top = `${Math.random() * 100}%`;
+    
+    background.appendChild(particle);
+
+    setTimeout(() => {
+        particle.remove();
+    }, 8000);
+}
+
+setInterval(createParticle, 1000);
