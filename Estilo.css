@@ -350,7 +350,8 @@ main {
     color: white;
     padding: 20px;
     text-align: center;
-}html, body {
+}
+html, body {
     height: 100%;
     overflow-y: auto; /* Permite rolagem vertical */
     margin: 0;
