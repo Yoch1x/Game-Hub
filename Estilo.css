@@ -382,7 +382,7 @@ body, html {
     left: 0;
     width: 200%;
     height: 200%;
-    background: url('https://www.transparenttextures.com/patterns/topography.png');
+    background: url('./images/Fundo.jpg');
     opacity: 0.2;
     animation: animatePattern 10s linear infinite;
 }
