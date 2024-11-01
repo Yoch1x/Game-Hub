@@ -384,7 +384,7 @@ body, html {
     height: 200%;
     background: url('./images/Fundo.jpg');
     opacity: 0.2;
-    animation: animatePattern 10s linear infinite;
+    animation: animatePattern 20s linear infinite;
 }
 
 @keyframes animatePattern {
