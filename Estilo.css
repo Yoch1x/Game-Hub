@@ -290,3 +290,52 @@ section#reviews2 .review:hover h3 {
     transform: scale(0.98);
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
 }
+
+/* Ajuste para a disposição das caixas de download */
+.review-container {
+    display: flex;
+    justify-content: space-between; /* Alinha as caixas lado a lado com espaçamento */
+    gap: 20px; /* Espaço entre as caixas */
+    flex-wrap: wrap; /* Permite que as caixas quebrem a linha quando necessário */
+    margin-top: 100px;
+}
+
+/* Ajusta as caixas de download */
+.downloads {
+    flex: 1 1 calc(33.33% - 20px); /* Cada caixa ocupa 1/3 do espaço disponível */
+    box-sizing: border-box;
+    background-color: #222;
+    padding: 20px;
+    border-radius: 8px;
+    text-align: center;
+    transition: transform 0.3s ease-in-out;
+    min-width: 250px; /* Largura mínima para garantir que não fiquem pequenas demais */
+}
+
+.downloads img {
+    width: 100%; /* Faz a imagem ocupar 100% do tamanho da caixa */
+    height: auto;
+    border-radius: 8px;
+    transition: transform 0.3s ease-in-out;
+}
+
+.downloads:hover {
+    transform: scale(1.05); /* Leve efeito de zoom quando passar o mouse */
+}
+
+.downloads:hover img {
+    transform: scale(1.1); /* Efeito de zoom na imagem ao passar o mouse */
+}
+
+/* Responsividade para telas pequenas */
+@media (max-width: 768px) {
+    .review-container {
+        flex-direction: column; /* Empilha as caixas quando a tela é menor */
+        align-items: center;
+    }
+
+    .downloads {
+        flex: 1 1 100%; /* Cada caixa ocupa 100% da largura da tela */
+        margin-bottom: 20px;
+    }
+}
