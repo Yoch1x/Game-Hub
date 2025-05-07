@@ -58,8 +58,8 @@ window.onload = function() {
             localStorage.setItem('hasAccount', 'true'); // Marcar que o usuário tem uma conta
             
             // Mostrar a tela de login
-            document.getElementById('signup-screen').style.display = 'none';
-            document.getElementById('login-screen').style.display = 'block';
+            document.getElementById('login-screen').style.display = 'none';
+            document.getElementById('downloads-section').style.display = 'block';
         }
     };
 
@@ -87,4 +87,9 @@ window.onload = function() {
         document.getElementById('login-screen').style.display = 'none';
         document.getElementById('signup-screen').style.display = 'block';
     };
+};
+
+document.getElementById('go-to-login').onclick = function() {
+    document.getElementById('signup-screen').style.display = 'none';
+    document.getElementById('login-screen').style.display = 'block';
 };
