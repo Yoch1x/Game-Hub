@@ -6,14 +6,18 @@
 }
 
 /* Corpo geral */
-body {
+html, body {
+    height: 100%;
+    overflow-x: hidden; /* Permite rolagem vertical */
+    margin: 0;
+    padding: 0;
     font-family: 'Poppins', sans-serif;
     background: radial-gradient(circle, #1b1b1e, #242428);
     color: white;
     line-height: 1.6;
 }
 
-/* Estilos do cabeçalho */
+/* Estilo do cabeçalho */
 header {
     background: rgba(0, 0, 0, 0.7);
     padding: 20px;
@@ -69,225 +73,7 @@ nav ul li a:hover::after {
     width: 100%;
 }
 
-/* Hero Section */
-#hero {
-    height: 100vh;
-    background: url('https://source.unsplash.com/1600x900/?video-games') no-repeat center center/cover;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    color: white;
-    text-align: center;
-    padding: 0 20px;
-    transition: background 0.5s ease-in-out;
-}
-
-#hero h2 {
-    font-size: 3rem;
-    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
-    margin-bottom: 20px;
-}
-
-#hero p {
-    font-size: 1.2rem;
-    margin-bottom: 40px;
-    color: #ddd;
-}
-
-#cta-button {
-    background-color: #e94560;
-    color: white;
-    padding: 15px 30px;
-    border: none;
-    border-radius: 30px;
-    font-size: 1.2rem;
-    transition: transform 0.4s, box-shadow 0.4s, background-color 0.4s;
-    cursor: pointer;
-    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
-}
-
-#cta-button:hover {
-    background-color: #2404da;
-    transform: translateY(-5px);
-    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
-}
-
-/* Seção de Reviews */
-section {
-    padding: 100px 20px;
-    text-align: center;
-    background: rgba(0, 0, 0, 0.8);
-}
-
-section h2 {
-    font-size: 2.5rem;
-    margin-bottom: 40px;
-    color: #1a0cdb;
-}
-
-article {
-    background-color: #2c2c34;
-    padding: 20px;
-    border-radius: 15px;
-    margin: 20px 0;
-    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.3);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-article:hover {
-    transform: translateY(-10px);
-    box-shadow: 0 12px 20px rgba(0, 0, 0, 0.4);
-}
-
-article h3 {
-    font-size: 1.8rem;
-    color: #1f0bd4;
-    margin-bottom: 10px;
-}
-
-article p {
-    font-size: 1rem;
-    color: #ddd;
-    margin-bottom: 15px;
-}
-
-article button {
-    padding: 10px 20px;
-    border: none;
-    background-color: #5d40ff;
-    color: white;
-    border-radius: 20px;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-}
-
-article button:hover {
-    background-color: #220ddb;
-}
-
-/* Seção de Gameplay */
-#gameplays article {
-    background-color: #202025;
-}
-
-/* Rodapé */
-footer {
-    background-color: #111;
-    padding: 20px;
-    text-align: center;
-    font-size: 1rem;
-    color: #999;
-    margin-top: 40px;
-}
-
-/* Efeitos Responsivos */
-@media (max-width: 768px) {
-    h1 {
-        font-size: 2.5rem;
-    }
-
-    #hero h2 {
-        font-size: 2.2rem;
-    }
-
-    #cta-button {
-        padding: 10px 20px;
-        font-size: 1rem;
-    }
-
-    nav ul {
-        flex-direction: column;
-        margin-top: 20px;
-    }
-
-    nav ul li {
-        margin: 10px 0;
-    }
-}.review-image {
-    width: 100%; /* Ajusta a largura da imagem para preencher o espaço */
-    max-width: 400px; /* Define uma largura máxima */
-    height: auto; /* Mantém a proporção da imagem */
-    border-radius: 10px; /* Arredonda os cantos da imagem */
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3); /* Sombra para dar profundidade */
-    margin: 10px 0; /* Espaço entre a imagem e o texto */
-}
-
-
-.particle:nth-child(1) {
-    width: 10px;
-    height: 10px;
-    top: 20%;
-    left: 25%;
-    animation-duration: 7s;
-}
-
-.particle:nth-child(2) {
-    width: 15px;
-    height: 15px;
-    top: 50%;
-    left: 10%;
-    animation-duration: 5s;
-}
-
-.particle:nth-child(3) {
-    width: 20px;
-    height: 20px;
-    top: 70%;
-    left: 50%;
-    animation-duration: 6s;
-}
-
-
-.particle:nth-child(1) {
-    width: 10px;
-    height: 10px;
-    top: 20%;
-    left: 25%;
-    animation-duration: 7s;
-}
-
-.particle:nth-child(2) {
-    width: 15px;
-    height: 15px;
-    top: 50%;
-    left: 10%;
-    animation-duration: 5s;
-}
-
-.particle:nth-child(3) {
-    width: 20px;
-    height: 20px;
-    top: 70%;
-    left: 50%;
-    animation-duration: 6s;
-}
 /* Fundo animado */
-.animated-background {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100vw;
-    height: 100vh;
-    z-index: -1;
-    background: linear-gradient(135deg, #1a1a1d, #282828, #1a1a1d);
-    background-size: 300% 300%;
-    animation: gradientBackground 15s ease infinite;
-    overflow: hidden;
-}
-
-@keyframes gradientBackground {
-    0% { background-position: 0% 50%; }
-    50% { background-position: 100% 50%; }
-    100% { background-position: 0% 50%; }
-}/* Fundo animado */
-body, html {
-    margin: 0;
-    padding: 0;
-    overflow: hidden;
-    font-family: Arial, sans-serif;
-}
-
 .background-pattern {
     position: fixed;
     top: 0;
@@ -319,51 +105,44 @@ body, html {
     }
 }
 
-/* Estilo do conteúdo */
-header {
-    position: relative;
-    z-index: 10;
-    color: white;
-    text-align: center;
-    padding: 20px;
+/* Partículas */
+.particle:nth-child(1) {
+    width: 10px;
+    height: 10px;
+    top: 20%;
+    left: 25%;
+    animation-duration: 7s;
 }
 
-nav ul {
-    list-style: none;
-    padding: 0;
+.particle:nth-child(2) {
+    width: 15px;
+    height: 15px;
+    top: 50%;
+    left: 10%;
+    animation-duration: 5s;
 }
 
-nav ul li {
-    display: inline;
-    margin: 0 10px;
+.particle:nth-child(3) {
+    width: 20px;
+    height: 20px;
+    top: 70%;
+    left: 50%;
+    animation-duration: 6s;
 }
 
-nav ul li a {
-    color: #ffffff;
-    text-decoration: none;
-    font-weight: bold;
-}
-
-main {
-    position: relative;
-    z-index: 10;
-    color: white;
-    padding: 20px;
-    text-align: center;
-}
-html, body {
-    height: 100%;
-    overflow-y: auto; /* Permite rolagem vertical */
-    margin: 0;
-    padding: 0;
-}
-h4 {
-    font-size: -2rem;
-    color: #0d10e0;
-    letter-spacing: 4px;
-}
-.aqui {
+/* Classe Aqui */
+.Aqui {
     font-size: 1rem;
     color: #0d10e0;
     letter-spacing: 4px;
+}
+
+/* Rodapé */
+footer {
+    background-color: #111;
+    padding: 20px;
+    text-align: center;
+    font-size: 1rem;
+    color: #999;
+    margin-top: 40px;
 }
