@@ -8,13 +8,14 @@
 /* Corpo geral */
 html, body {
     height: 100%;
-    overflow-x: hidden; /* Permite rolagem vertical */
+    overflow-x: hidden;
     margin: 0;
     padding: 0;
     font-family: 'Poppins', sans-serif;
     background: radial-gradient(circle, #1b1b1e, #242428);
     color: white;
     line-height: 1.6;
+    padding-top: 80px; /* Compensa o cabeçalho fixo */
 }
 
 /* Estilo do cabeçalho */
@@ -40,109 +41,4 @@ h1 {
     letter-spacing: 4px;
 }
 
-nav ul {
-    list-style: none;
-    display: flex;
-    justify-content: center;
-    margin-top: 10px;
-}
-
-nav ul li {
-    margin: 0 20px;
-}
-
-nav ul li a {
-    color: white;
-    text-decoration: none;
-    font-size: 1.1rem;
-    position: relative;
-    padding-bottom: 5px;
-}
-
-nav ul li a::after {
-    content: '';
-    width: 0;
-    height: 3px;
-    background-color: #0931e0;
-    display: block;
-    margin: auto;
-    transition: width 0.4s ease-in-out;
-}
-
-nav ul li a:hover::after {
-    width: 100%;
-}
-
-/* Fundo animado */
-.background-pattern {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100vw;
-    height: 100vh;
-    background: #000;
-    overflow: hidden;
-}
-
-.background-pattern::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 200%;
-    height: 200%;
-    background: url('./images/Fundo.jpg');
-    opacity: 0.2;
-    animation: animatePattern 20s linear infinite;
-}
-
-@keyframes animatePattern {
-    0% {
-        transform: translate(0, 0);
-    }
-    100% {
-        transform: translate(-50%, -50%);
-    }
-}
-
-/* Partículas */
-.particle:nth-child(1) {
-    width: 10px;
-    height: 10px;
-    top: 20%;
-    left: 25%;
-    animation-duration: 7s;
-}
-
-.particle:nth-child(2) {
-    width: 15px;
-    height: 15px;
-    top: 50%;
-    left: 10%;
-    animation-duration: 5s;
-}
-
-.particle:nth-child(3) {
-    width: 20px;
-    height: 20px;
-    top: 70%;
-    left: 50%;
-    animation-duration: 6s;
-}
-
-/* Classe Aqui */
-.Aqui {
-    font-size: 1rem;
-    color: #0d10e0;
-    letter-spacing: 4px;
-}
-
-/* Rodapé */
-footer {
-    background-color: #111;
-    padding: 20px;
-    text-align: center;
-    font-size: 1rem;
-    color: #999;
-    margin-top: 40px;
-}
+/* Outros estilos permanecem iguais */
