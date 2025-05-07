@@ -11,14 +11,21 @@
         <h1>GameHub</h1>
         <nav>
             <ul>
-                <li><a href="#">Início</a></li>
+                <li><a href="#" id="login-link">Login</a></li> <!-- Link do Login -->
                 <li><a href="#">Downloads</a></li>
             </ul>
         </nav>
     </header>
-
-    <div class="background-pattern"></div>
-
+    <section id="login-screen">
+        <form id="login-form">
+            <label for="username">Usuário:</label>
+            <input type="text" id="username" name="username" required>
+            <label for="password">Senha:</label>
+            <input type="password" id="password" name="password" required>
+            <button type="submit">Entrar</button>
+        </form>
+    </section>
+    
     <section id="downloads">
         <div class="review-container">
             <div class="downloads">
