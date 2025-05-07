@@ -1,6 +1,7 @@
 document.getElementById('cta-button').addEventListener('click', function() {
     alert('Prepare-se para explorar o mundo dos games!');
 });
+
 // Seleciona o cabeçalho
 const header = document.querySelector('.animated-header');
 
@@ -18,71 +19,8 @@ function createParticle() {
     // Remove a partícula depois de um tempo
     setTimeout(() => {
         particle.remove();
-    }, 8000); // Tempo de vida da partícula em ms
+    }, 8000);
 }
 
-window.onload = function() {
-    // Verificar se é a primeira vez do usuário
-    if (!localStorage.getItem('hasAccount')) {
-        document.getElementById('signup-screen').style.display = 'block'; // Mostra a tela de criação de conta
-    } else {
-        document.getElementById('login-screen').style.display = 'block'; // Mostra a tela de login
-    }
-
-// Função para mostrar/esconder a senha
-const showSignupPassword = document.getElementById('show-signup-password');
-const showPassword = document.getElementById('show-password');
-const signupPasswordInput = document.getElementById('signup-password');
-const passwordInput = document.getElementById('password');
-
-showSignupPassword.onclick = function() {
-    signupPasswordInput.type = signupPasswordInput.type === 'password' ? 'text' : 'password';
-};
-
-showPassword.onclick = function() {
-    passwordInput.type = passwordInput.type === 'password' ? 'text' : 'password';
-};
-// Criar conta
-document.getElementById('signup-form').onsubmit = function(e) {
-    e.preventDefault();
-    
-    const username = document.getElementById('signup-username').value;
-    const password = document.getElementById('signup-password').value;
-
-    if (username && password) {
-        // Armazenar informações da conta no localStorage
-        localStorage.setItem('username', username);
-        localStorage.setItem('password', password);
-        localStorage.setItem('hasAccount', 'true'); // Marcar que o usuário tem uma conta
-        
-        // Mudar para a tela de login, já com os campos preenchidos
-        document.getElementById('signup-screen').style.display = 'none';
-        document.getElementById('login-screen').style.display = 'block';
-        document.getElementById('username').value = username; // Preencher o campo de usuário do login
-        document.getElementById('password').value = password; // Preencher o campo de senha do login
-    }
-};
-
-// Fazer login
-document.getElementById('login-form').onsubmit = function(e) {
-    e.preventDefault();
-    
-    const username = document.getElementById('username').value;
-    const password = document.getElementById('password').value;
-    
-    const storedUsername = localStorage.getItem('username');
-    const storedPassword = localStorage.getItem('password');
-    
-    if (username === storedUsername && password === storedPassword) {
-        // Login bem-sucedido, ir para os downloads
-        document.getElementById('login-screen').style.display = 'none';
-        document.getElementById('downloads-section').style.display = 'block'; // Mostrar downloads
-    } else {
-        alert('Usuário ou senha inválidos!');
-    }
-};
-
-document.getElementById('go-to-login').onclick = function() {
-    document.getElementById('signup-screen').style.display = 'none';
-    document.getElementById('login-screen').style.display = 'block';
-};
+// Exemplo de partículas sendo criadas continuamente
+setInterval(createParticle, 300);
