@@ -16,23 +16,43 @@
             </ul>
         </nav>
     </header>
+    
+<!-- Tela de Criação de Conta -->
+<section id="signup-screen">
+    <div class="signup-container">
+        <h2>Criar Conta no GameHub</h2>
+        <form id="signup-form">
+            <div class="input-group">
+                <label for="signup-username">Usuário</label>
+                <input type="text" id="signup-username" name="signup-username" placeholder="Escolha seu usuário" required>
+            </div>
+            <div class="input-group">
+                <label for="signup-password">Senha</label>
+                <input type="password" id="signup-password" name="signup-password" placeholder="Escolha uma senha" required>
+            </div>
+            <button type="submit">Criar Conta</button>
+        </form>
+    </div>
+</section>
 
-    <section id="login-screen">
-        <div class="login-container">
-            <h2>Entrar no GameHub</h2>
-            <form id="login-form">
-                <div class="input-group">
-                    <label for="username">Usuário</label>
-                    <input type="text" id="username" name="username" placeholder="Digite seu usuário" required>
-                </div>
-                <div class="input-group">
-                    <label for="password">Senha</label>
-                    <input type="password" id="password" name="password" placeholder="Digite sua senha" required>
-                </div>
-                <button type="submit">Entrar</button>
-            </form>
-        </div>
-    </section>
+<!-- Tela de Login -->
+<section id="login-screen">
+    <div class="login-container">
+        <h2>Entrar no GameHub</h2>
+        <form id="login-form">
+            <div class="input-group">
+                <label for="username">Usuário</label>
+                <input type="text" id="username" name="username" placeholder="Digite seu usuário" required>
+            </div>
+            <div class="input-group">
+                <label for="password">Senha</label>
+                <input type="password" id="password" name="password" placeholder="Digite sua senha" required>
+            </div>
+            <button type="submit">Entrar</button>
+            <p><a href="#" id="go-to-signup">Criar Conta</a></p> <!-- Link para a criação de conta -->
+        </form>
+    </div>
+</section>
 
     <section id="downloads-section" style="display: none;">
         <div class="review-container">

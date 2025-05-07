@@ -21,21 +21,52 @@ function createParticle() {
     }, 8000); // Tempo de vida da partícula em ms
 }
 
-// Cria partículas a cada intervalo de tempo
-setInterval(createParticle, 1000);
+// Variáveis para as telas
+const loginScreen = document.getElementById('login-screen');
+const signupScreen = document.getElementById('signup-screen');
+const downloadsSection = document.getElementById('downloads-section');
 
+// Exibe a tela de criação de conta
+document.getElementById('go-to-signup').addEventListener('click', function() {
+    loginScreen.style.display = 'none';
+    signupScreen.style.display = 'block';
+});
+
+// Função para criar conta
+document.getElementById('signup-form').addEventListener('submit', function(event) {
+    event.preventDefault();
+
+    const username = document.getElementById('signup-username').value;
+    const password = document.getElementById('signup-password').value;
+
+    // Salva as credenciais no localStorage
+    localStorage.setItem('username', username);
+    localStorage.setItem('password', password);
+
+    alert('Conta criada com sucesso! Agora, faça login.');
+
+    // Volta para a tela de login
+    signupScreen.style.display = 'none';
+    loginScreen.style.display = 'block';
+});
+
+// Função de login
 document.getElementById('login-form').addEventListener('submit', function(event) {
-    event.preventDefault(); // Evita o envio do formulário padrão
+    event.preventDefault();
 
-    // Aqui você pode verificar o login (apenas uma validação simples para demonstração)
     const username = document.getElementById('username').value;
     const password = document.getElementById('password').value;
 
-    if (username === 'admin' && password === '12345') {
-        // Se o login for bem-sucedido, ocultamos a tela de login e mostramos os downloads
-        document.getElementById('login-screen').style.display = 'none';
-        document.getElementById('downloads-section').style.display = 'block';
-        document.getElementById('downloads-link').style.display = 'block'; // Mostra o link de downloads
+    // Verifica as credenciais armazenadas
+    const storedUsername = localStorage.getItem('username');
+    const storedPassword = localStorage.getItem('password');
+
+    if (username === storedUsername && password === storedPassword) {
+        alert('Login bem-sucedido!');
+        
+        // Mostra a seção de downloads e esconde a tela de login
+        loginScreen.style.display = 'none';
+        downloadsSection.style.display = 'block';
     } else {
         alert('Usuário ou senha incorretos!');
     }

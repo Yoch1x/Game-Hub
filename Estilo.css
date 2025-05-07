@@ -340,17 +340,17 @@ section#reviews2 .review:hover h3 {
     }
 }
 
-/* Estilos para o formulário de login */
-#login-screen {
+/* Estilo para a tela de Criação de Conta */
+#signup-screen {
+    display: none; /* Inicialmente oculta */
     display: flex;
     justify-content: center;
     align-items: center;
     height: 100vh;
-    background: linear-gradient(to right, #3f2b96, #a8c0ff); /* Gradiente de fundo */
-    font-family: 'Arial', sans-serif;
+    background: linear-gradient(to right, #3f2b96, #a8c0ff);
 }
 
-.login-container {
+.signup-container {
     background-color: #fff;
     padding: 40px;
     border-radius: 10px;
@@ -389,7 +389,7 @@ h2 {
 }
 
 .input-group input:focus {
-    border-color: #3f2b96; /* Cor de foco */
+    border-color: #3f2b96;
 }
 
 button {
@@ -405,29 +405,21 @@ button {
 }
 
 button:hover {
-    background-color: #5c3ea3; /* Cor do botão no hover */
-    transform: translateY(-3px); /* Efeito de elevação */
+    background-color: #5c3ea3;
+    transform: translateY(-3px);
 }
 
 button:active {
-    transform: translateY(1px); /* Efeito de "pressionado" */
+    transform: translateY(1px);
 }
 
-input::placeholder {
-    color: #bbb;
-    font-style: italic;
+/* Link para a tela de criação de conta */
+#login-screen p a {
+    text-decoration: none;
+    color: #3f2b96;
+    font-weight: bold;
 }
 
-/* Animação de entrada do formulário */
-#login-screen .login-container {
-    opacity: 0;
-    transform: translateY(-50px);
-    animation: slideIn 0.5s forwards;
-}
-
-@keyframes slideIn {
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
+#login-screen p a:hover {
+    color: #5c3ea3;
 }
