@@ -23,3 +23,20 @@ function createParticle() {
 
 // Cria partículas a cada intervalo de tempo
 setInterval(createParticle, 1000);
+
+document.getElementById('login-form').addEventListener('submit', function(event) {
+    event.preventDefault(); // Evita o envio do formulário padrão
+
+    // Aqui você pode verificar o login (apenas uma validação simples para demonstração)
+    const username = document.getElementById('username').value;
+    const password = document.getElementById('password').value;
+
+    if (username === 'admin' && password === '12345') {
+        // Se o login for bem-sucedido, ocultamos a tela de login e mostramos os downloads
+        document.getElementById('login-screen').style.display = 'none';
+        document.getElementById('downloads-section').style.display = 'block';
+        document.getElementById('downloads-link').style.display = 'block'; // Mostra o link de downloads
+    } else {
+        alert('Usuário ou senha incorretos!');
+    }
+});
