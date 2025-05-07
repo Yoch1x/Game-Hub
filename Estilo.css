@@ -254,3 +254,39 @@ section#reviews2 .review:hover h3 {
         transform: translateY(0);
     }
 }
+
+/* Estilo para o botão de download */
+.download-button {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #0931e0;
+    color: white;
+    font-size: 1.1rem;
+    font-weight: bold;
+    text-decoration: none;
+    border-radius: 5px;
+    text-align: center;
+    transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+    border: 2px solid transparent;
+    cursor: pointer;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+}
+
+/* Efeito de hover */
+.download-button:hover {
+    background-color: #0d10e0;
+    transform: scale(1.05);
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.3);
+}
+
+/* Efeito de foco (quando o botão é clicado) */
+.download-button:focus {
+    outline: none;
+    border-color: #0931e0;
+}
+
+/* Efeito ao passar o mouse em cima de uma área de imagem do botão */
+.download-button:active {
+    transform: scale(0.98);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+}
