@@ -26,64 +26,12 @@ header {
     width: 100%;
     top: 0;
     left: 0;
-    z-index: 1000;
+    z-index: 10; /* Certifique-se de que o cabeçalho está acima do fundo */
     transition: background-color 0.3s ease-in-out;
 }
 
 header:hover {
     background-color: rgba(0, 0, 0, 0.9);
-}
-
-h1 {
-    font-size: 3rem;
-    color: #0d10e0;
-    letter-spacing: 4px;
-    text-transform: uppercase;
-    animation: fadeIn 1s ease-out;
-}
-
-nav ul {
-    list-style: none;
-    display: flex;
-    justify-content: center;
-    margin-top: 10px;
-}
-
-nav ul li {
-    margin: 0 20px;
-    transition: transform 0.3s ease-in-out;
-}
-
-nav ul li:hover {
-    transform: scale(1.1);
-}
-
-nav ul li a {
-    color: white;
-    text-decoration: none;
-    font-size: 1.1rem;
-    position: relative;
-    padding-bottom: 5px;
-    transition: color 0.3s ease-in-out;
-}
-
-nav ul li a::after {
-    content: '';
-    width: 0;
-    height: 3px;
-    background-color: #0931e0;
-    display: block;
-    margin: auto;
-    transition: width 0.4s ease-in-out;
-}
-
-nav ul li a:hover::after {
-    width: 100%;
-    transition: width 0.4s ease-in-out;
-}
-
-nav ul li a:hover {
-    color: #0931e0;
 }
 
 /* Fundo animado */
@@ -95,88 +43,7 @@ nav ul li a:hover {
     height: 100vh;
     background: #000;
     overflow: hidden;
-}
-
-.background-pattern::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 200%;
-    height: 200%;
-    background: url('./images/Fundo.jpg');
-    opacity: 0.3;
-    animation: animatePattern 30s linear infinite;
-}
-
-@keyframes animatePattern {
-    0% {
-        transform: translate(0, 0);
-    }
-    100% {
-        transform: translate(-50%, -50%);
-    }
-}
-
-/* Partículas */
-.particle:nth-child(1) {
-    width: 10px;
-    height: 10px;
-    top: 20%;
-    left: 25%;
-    animation-duration: 7s;
-}
-
-.particle:nth-child(2) {
-    width: 15px;
-    height: 15px;
-    top: 50%;
-    left: 10%;
-    animation-duration: 5s;
-}
-
-.particle:nth-child(3) {
-    width: 20px;
-    height: 20px;
-    top: 70%;
-    left: 50%;
-    animation-duration: 6s;
-}
-
-/* Classe Aqui */
-.Aqui {
-    font-size: 1rem;
-    color: #0d10e0;
-    letter-spacing: 4px;
-}
-
-/* Rodapé */
-footer {
-    background-color: #111;
-    padding: 20px;
-    text-align: center;
-    font-size: 1rem;
-    color: #999;
-    margin-top: 40px;
-    transition: opacity 0.3s ease-in-out;
-}
-
-/* Ajustar tamanho do texto */
-h1 {
-    font-size: 3rem;
-}
-
-h2 {
-    font-size: 1.5rem;
-}
-
-h3 {
-    font-size: 1.2rem;
-}
-
-p {
-    font-size: 1rem;
-    line-height: 1.5;
+    z-index: -1; /* Garante que o fundo fique atrás do conteúdo */
 }
 
 /* Estilo para as reviews */
@@ -186,30 +53,16 @@ section#reviews2 .review-container {
     gap: 20px;
     justify-content: center;
     margin-top: 100px; /* Para dar espaço após o header fixo */
-    animation: fadeInUp 1s ease-out;
 }
 
 section#reviews2 .review {
     flex: 1 1 calc(33.33% - 20px);
+    min-width: 250px; /* Define uma largura mínima */
     box-sizing: border-box;
     background-color: #222;
     padding: 20px;
     border-radius: 8px;
     text-align: center;
-    opacity: 0;
-    animation: fadeInUp 1s ease-out forwards;
-}
-
-section#reviews2 .review:nth-child(1) {
-    animation-delay: 0.2s;
-}
-
-section#reviews2 .review:nth-child(2) {
-    animation-delay: 0.4s;
-}
-
-section#reviews2 .review:nth-child(3) {
-    animation-delay: 0.6s;
 }
 
 section#reviews2 .review img {
@@ -234,23 +87,13 @@ section#reviews2 .review:hover h3 {
     color: #0d10e0;
 }
 
-/* Animações */
-@keyframes fadeIn {
-    0% {
-        opacity: 0;
-    }
-    100% {
-        opacity: 1;
-    }
-}
-
-@keyframes fadeInUp {
-    0% {
-        opacity: 0;
-        transform: translateY(20px);
-    }
-    100% {
-        opacity: 1;
-        transform: translateY(0);
-    }
+/* Rodapé */
+footer {
+    background-color: #111;
+    padding: 20px;
+    text-align: center;
+    font-size: 1rem;
+    color: #999;
+    margin-top: 40px;
+    position: relative;
 }
