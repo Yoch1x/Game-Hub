@@ -16,33 +16,50 @@
             </ul>
         </nav>
     </header>
-    
-<!-- Tela de Criação de Conta -->
-<section id="signup-screen" class="screen">
-    <div class="signup-container">
-        <h2>Criar Conta no ZipZap</h2>
-        <form id="signup-form">
-            <div class="input-group">
-                <label for="signup-username">Usuário</label>
-                <input type="text" id="signup-username" name="signup-username" placeholder="Escolha seu usuário" required>
-            </div>
-            <div class="input-group">
-                <label for="signup-password">Senha</label>
-                <input type="password" id="signup-password" name="signup-password" placeholder="Escolha uma senha" required>
-                <span id="show-signup-password" class="show-password">👁️</span>
-            </div>
-            <button type="submit">Criar Conta</button>
-        </form>
-    </div>
-</section>
 
-<section>
-    
-    <p><a href="#" id="go-to-login">Voltar ao Login</a></p>
+    <!-- Tela de Criação de Conta -->
+    <section id="signup-screen" class="screen">
+        <div class="signup-container">
+            <h2 id="title">Criar Conta no GameHub</h2>
+            <form id="signup-form">
+                <div class="input-group">
+                    <label for="signup-username">Usuário</label>
+                    <input type="text" id="signup-username" name="signup-username" placeholder="Escolha seu usuário" required>
+                </div>
+                <div class="input-group">
+                    <label for="signup-password">Senha</label>
+                    <input type="password" id="signup-password" name="signup-password" placeholder="Escolha uma senha" required>
+                    <span id="show-signup-password" class="show-password">👁️</span>
+                </div>
+                <button type="submit">Criar Conta</button>
+            </form>
+        </div>
+    </section>
 
-</section>
+    <!-- Tela de Login (apenas visível após criar a conta) -->
+    <section id="login-screen" class="screen" style="display: none;">
+        <div class="login-container">
+            <h2 id="title">Entrar no GameHub</h2>
+            <form id="login-form">
+                <div class="input-group">
+                    <label for="username">Usuário</label>
+                    <input type="text" id="username" name="username" placeholder="Digite seu usuário" required>
+                </div>
+                <div class="input-group">
+                    <label for="password">Senha</label>
+                    <input type="password" id="password" name="password" placeholder="Digite sua senha" required>
+                    <span id="show-password" class="show-password">👁️</span>
+                </div>
+                <button type="submit">Entrar</button>
+            </form>
+        </div>
+    </section>
 
-  <!-- Aba de Downloads (apenas visível quando o login for bem-sucedido) -->
+    <section>
+        <p><a href="#" id="go-to-login">Voltar ao Login</a></p>
+    </section>
+
+    <!-- Aba de Downloads (apenas visível quando o login for bem-sucedido) -->
     <section id="downloads-section" style="display: none;">
         <div class="review-container">
             <div class="downloads">
@@ -67,7 +84,7 @@
     </section>
 
     <footer>
-        <p>&copy; 2025 GameHub. Todos os direitos reservados.</p>
+        <p>&copy; 2025 ZipZap. Todos os direitos reservados.</p>
     </footer>
 
     <script src="Java Script.js"></script>

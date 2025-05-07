@@ -29,20 +29,39 @@ window.onload = function() {
         document.getElementById('login-screen').style.display = 'block'; // Mostra a tela de login
     }
 
-    // Mostra e esconde a senha
-    const showSignupPassword = document.getElementById('show-signup-password');
-    const showPassword = document.getElementById('show-password');
+// Função para mostrar/esconder a senha
+const showSignupPassword = document.getElementById('show-signup-password');
+const showPassword = document.getElementById('show-password');
+const signupPasswordInput = document.getElementById('signup-password');
+const passwordInput = document.getElementById('password');
 
-    const signupPasswordInput = document.getElementById('signup-password');
-    const passwordInput = document.getElementById('password');
+showSignupPassword.onclick = function() {
+    signupPasswordInput.type = signupPasswordInput.type === 'password' ? 'text' : 'password';
+};
 
-    showSignupPassword.onclick = function() {
-        signupPasswordInput.type = signupPasswordInput.type === 'password' ? 'text' : 'password';
-    };
+showPassword.onclick = function() {
+    passwordInput.type = passwordInput.type === 'password' ? 'text' : 'password';
+};
+// Criar conta
+document.getElementById('signup-form').onsubmit = function(e) {
+    e.preventDefault();
+    
+    const username = document.getElementById('signup-username').value;
+    const password = document.getElementById('signup-password').value;
 
-    showPassword.onclick = function() {
-        passwordInput.type = passwordInput.type === 'password' ? 'text' : 'password';
-    };
+    if (username && password) {
+        // Armazenar informações da conta no localStorage
+        localStorage.setItem('username', username);
+        localStorage.setItem('password', password);
+        localStorage.setItem('hasAccount', 'true'); // Marcar que o usuário tem uma conta
+        
+        // Mudar para a tela de login, já com os campos preenchidos
+        document.getElementById('signup-screen').style.display = 'none';
+        document.getElementById('login-screen').style.display = 'block';
+        document.getElementById('username').value = username; // Preencher o campo de usuário do login
+        document.getElementById('password').value = password; // Preencher o campo de senha do login
+    }
+};
 
 // Fazer login
 document.getElementById('login-form').onsubmit = function(e) {
@@ -57,36 +76,10 @@ document.getElementById('login-form').onsubmit = function(e) {
     if (username === storedUsername && password === storedPassword) {
         // Login bem-sucedido, ir para os downloads
         document.getElementById('login-screen').style.display = 'none';
-        document.getElementById('downloads-section').style.display = 'block'; // ID corrigido aqui
+        document.getElementById('downloads-section').style.display = 'block'; // Mostrar downloads
     } else {
         alert('Usuário ou senha inválidos!');
     }
-};
-
-// Criar conta
-document.getElementById('signup-form').onsubmit = function(e) {
-    e.preventDefault();
-    
-    const username = document.getElementById('signup-username').value;
-    const password = document.getElementById('signup-password').value;
-
-    if (username && password) {
-        // Armazenar informações da conta no localStorage
-        localStorage.setItem('username', username);
-        localStorage.setItem('password', password);
-        localStorage.setItem('hasAccount', 'true'); // Marcar que o usuário tem uma conta
-        
-        // Redirecionar para login
-        document.getElementById('signup-screen').style.display = 'none';
-        document.getElementById('login-screen').style.display = 'block';
-    }
-};
-
-    // Ir para a tela de criação de conta
-    document.getElementById('go-to-signup').onclick = function() {
-        document.getElementById('login-screen').style.display = 'none';
-        document.getElementById('signup-screen').style.display = 'block';
-    };
 };
 
 document.getElementById('go-to-login').onclick = function() {
