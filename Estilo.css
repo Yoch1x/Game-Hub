@@ -180,7 +180,7 @@ p {
 }
 
 /* Estilo para as reviews */
-section#reviews2 .review-container {
+section#downloads .review-container {
     display: flex;
     flex-wrap: wrap;
     gap: 20px;
