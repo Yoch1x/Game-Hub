@@ -44,45 +44,41 @@ window.onload = function() {
         passwordInput.type = passwordInput.type === 'password' ? 'text' : 'password';
     };
 
-    // Criar conta
-    document.getElementById('signup-form').onsubmit = function(e) {
+// Fazer login
+document.getElementById('login-form').onsubmit = function(e) {
     e.preventDefault();
-
-      const username = document.getElementById('signup-username').value.trim();
-      const password = document.getElementById('signup-password').value;
-
-    if (username && password) {
-        // Armazenar as informações corretamente
-        localStorage.setItem('username', username);
-        localStorage.setItem('password', password);
-        localStorage.setItem('hasAccount', 'true');
-
-        alert('Conta criada com sucesso! Faça login.');
-
-        // Ir para a tela de login
-        document.getElementById('signup-screen').style.display = 'none';
-        document.getElementById('login-screen').style.display = 'block';
-    } else {
-        alert('Preencha todos os campos!');
-    }
-};
     
-    // Fazer login
-    document.getElementById('login-form').onsubmit = function(e) {
-    e.preventDefault();
-
-    const username = document.getElementById('username').value.trim();
+    const username = document.getElementById('username').value;
     const password = document.getElementById('password').value;
-
+    
     const storedUsername = localStorage.getItem('username');
     const storedPassword = localStorage.getItem('password');
-
+    
     if (username === storedUsername && password === storedPassword) {
-        alert('Login bem-sucedido!');
+        // Login bem-sucedido, ir para os downloads
         document.getElementById('login-screen').style.display = 'none';
-        document.getElementById('downloads-section').style.display = 'block';
+        document.getElementById('downloads-section').style.display = 'block'; // ID corrigido aqui
     } else {
         alert('Usuário ou senha inválidos!');
+    }
+};
+
+// Criar conta
+document.getElementById('signup-form').onsubmit = function(e) {
+    e.preventDefault();
+    
+    const username = document.getElementById('signup-username').value;
+    const password = document.getElementById('signup-password').value;
+
+    if (username && password) {
+        // Armazenar informações da conta no localStorage
+        localStorage.setItem('username', username);
+        localStorage.setItem('password', password);
+        localStorage.setItem('hasAccount', 'true'); // Marcar que o usuário tem uma conta
+        
+        // Redirecionar para login
+        document.getElementById('signup-screen').style.display = 'none';
+        document.getElementById('login-screen').style.display = 'block';
     }
 };
 
